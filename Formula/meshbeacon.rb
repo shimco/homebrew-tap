@@ -26,7 +26,7 @@ class Meshbeacon < Formula
 
   def install
     bin.install "meshbeacon"
-    etc.install "meshbeacon.example.json" => "meshbeacon/meshbeacon.json" unless (etc/"meshbeacon/meshbeacon.json").exist?
+    (etc/"meshbeacon").install "meshbeacon.example.json" => "meshbeacon.json" unless (etc/"meshbeacon/meshbeacon.json").exist?
   end
 
   service do
