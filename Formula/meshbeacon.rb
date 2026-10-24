@@ -1,26 +1,26 @@
 class Meshbeacon < Formula
   desc "Local LAN media gateway and smart TV autodiscovery beacon"
   homepage "https://shimmin.co/logs/meshbeacon-smart-tvs-wireguard-go"
-  version "0.8.0"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/shimco/meshbeacon/releases/download/v0.8.0/meshbeacon_darwin_arm64.tar.gz"
-      sha256 "a25a323c3c2f9ea95343590113a4e806e2bc0b326a38d1888aac89456f2f2620"
+      url "https://github.com/shimco/meshbeacon/releases/download/v0.8.1/meshbeacon_darwin_arm64.tar.gz"
+      sha256 "0ed8a941f2213d6e93473fac3875509404d3f66065490f7b4bc04d596adb8b13"
     else
-      url "https://github.com/shimco/meshbeacon/releases/download/v0.8.0/meshbeacon_darwin_amd64.tar.gz"
-      sha256 "5ec39205d64ec3d926526607c1f62c14ca83fd39f62ab6ff7169b9a6bd2e10c4"
+      url "https://github.com/shimco/meshbeacon/releases/download/v0.8.1/meshbeacon_darwin_amd64.tar.gz"
+      sha256 "5fa5552e8db6bbc8765a606a8e26cf18655bc93085fe98d35760507cf25aaff4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shimco/meshbeacon/releases/download/v0.8.0/meshbeacon_linux_arm64.tar.gz"
-      sha256 "1f9769dc90385fd5bbcab1efd8b778ba3214b8a22b912b0d47832f87511b31ee"
+      url "https://github.com/shimco/meshbeacon/releases/download/v0.8.1/meshbeacon_linux_arm64.tar.gz"
+      sha256 "f867113ff7491a1df284dc8689d66ec6095fdae333a1835ba14bee76a84b1a28"
     elsif Hardware::CPU.intel?
-      url "https://github.com/shimco/meshbeacon/releases/download/v0.8.0/meshbeacon_linux_amd64.tar.gz"
-      sha256 "6def3082d191dd841d256284b5dddce93d1a31613faec09dd6e4ffdf4d9c7af0"
+      url "https://github.com/shimco/meshbeacon/releases/download/v0.8.1/meshbeacon_linux_amd64.tar.gz"
+      sha256 "05992f9ec1a33cbb1281186f408d631a6f66af2830ae346f308c58522c025dac"
     end
   end
 
